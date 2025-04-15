@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria do Jefão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="cadastrar">
+    <form onsubmit="login(); return false;" class="login">
+        <h3 class="cadastro">Cadastrar</h3>
+       <label for="Login" class="nomezinho">Nome</label>
+        <input type="text" placeholder="" id="Login" required class="barrazinha">
+       <label for="Senha" class="nomezinho">Senha</label>
+        <input type="password" placeholder="" id="Senha" required class="barrazinha">
+      <label for="Email" class="nomezinho" >Email</label>
+       <input type="email" placeholder="" id="Email" required class="barrazinha">
+      <label for="Telefone" class="nomezinho">Telefone</label>
+       <input type="tel" placeholder="" id="Telefone" required class="barrazinha">
+
+      <input type="submit" value="ENTRAR" class="botaodeentrar">
+    </section>
+    </form>
+    <script>
+        function login() {
+            var login = document.getElementById("Login").value;
+            var senha = document.getElementById("Senha").value;
+        
+            if (login == "admin" && senha == "123") {
+                alert('SUCESSO');
+                location.href = "home.html";
+            } else {
+                alert('usuário e senha incorretos');
+            }
+        }
+        </script>
+</body>
+</html>
